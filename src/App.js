@@ -10,20 +10,18 @@ import {
 export class App extends Component {
   render() {
     return (
-      <Router>
-        <div>
-          <nav>
-            <Link to={'/page1'}>Pagina 1</Link>
-            <Link to={'/page2'}>Pagina 2</Link>
-          </nav>
-          <Switch>
-            <Redirect exact from="/" to="/page1" />
-            <Route exact path="/page1" component={Page1} />
-            <Route exact path="/page2" component={Page2} />
-            <Route component={NotFound} />
-          </Switch>
-        </div>
-      </Router>
+      <div>
+        <nav>
+          <Link to={'/page1'}>Pagina 1</Link>
+          <Link to={'/page2'}>Pagina 2</Link>
+        </nav>
+        <Switch>
+          <Redirect exact from="/" to="/page1" />
+          <Route exact path="/page1" component={Page1} />
+          <Route exact path="/page2" component={Page2} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
     );
   }
 }
